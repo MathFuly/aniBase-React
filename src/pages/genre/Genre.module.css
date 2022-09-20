@@ -1,0 +1,48 @@
+.genresearch {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+.genrescontainer {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+.genresoverflow {
+  height: 850px;
+  overflow-y: scroll;
+}
+.genrescontainer button {
+  width: 150px;
+  padding: 10px;
+  margin: 5px;
+  background-color: transparent;
+  border: 3px solid rgba(220, 20, 60, 0.566);
+  color: crimson;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.genrescontainer button:hover {
+  background-color: crimson;
+  color: white;
+}
+.genrescontainer button:focus {
+  border: 3px solid rgb(35, 35, 35);
+  color: white;
+  background-color: rgb(35, 35, 35);
+}
+.animecontainer {
+  width: 90%;
+  height: 850px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.animeoverflow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.selector {
+  width: 200px;
+}

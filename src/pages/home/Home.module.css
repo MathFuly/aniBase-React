@@ -1,0 +1,29 @@
+.title {
+  width: 55%;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 0, 0, 0),
+    #3d49cf,
+    #3d49cf
+  );
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.title span {
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title svg {
+  font-size: 40px;
+  color: white;
+}
+.title h1 {
+  color: white;
+  padding: 10px 5px;
+  width: 50%;
+}

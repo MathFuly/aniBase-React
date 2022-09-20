@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #858585b6;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: crimson;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2e3de5;
+}
+
+.load {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  font-weight: bold;
+  text-align: center;
+}
+.load svg {
+  display: inline;
+  color: crimson;
+  font-size: 80px;
+  animation: identifier 5s linear 0.2s infinite;
+}
+
+@keyframes identifier {
+  from {
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

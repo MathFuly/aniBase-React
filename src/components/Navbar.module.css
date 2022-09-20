@@ -1,0 +1,93 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 80px;
+  align-items: center;
+  background-color: #212121;
+  margin-bottom: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 30px;
+  color: white;
+  width: 200px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.logo svg {
+  font-size: 50px;
+  color: crimson;
+}
+.logo span {
+  display: flex;
+}
+.logo span span {
+  color: crimson;
+  font-weight: bold;
+}
+.links {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 18px;
+  transition: 0.4s;
+  border-bottom: 2px solid transparent;
+}
+.links a:hover  .overflowc span{
+  display: inline-block;
+}
+.overflowc span{
+  display: none;
+}
+.links a:hover {
+  color: crimson;
+}
+.overflowc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overflowc svg {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.navbar form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar button svg {
+  margin-left: 20px;
+  font-size: 20px;
+  color: white;
+}
+.navbar button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.navbar button:hover svg {
+  color: crimson;
+}
+.navbar input {
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 230px;
+  border: none;
+  outline: none;
+}
+.navbar input:focus {
+  box-shadow: 0px 0px 10px crimson;
+}
