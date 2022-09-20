@@ -1,16 +1,35 @@
 .genresearch {
-  width: 90%;
+  width: 95%;
   margin: auto;
   display: flex;
+  flex-direction: column;
 }
 .genrescontainer {
   display: flex;
-  flex-direction: column;
-  width: 10%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
-.genresoverflow {
-  height: 850px;
-  overflow-y: scroll;
+.genresoverflowhidden {
+  height: 50px;
+  transition: 2s;
+  overflow: hidden;
+}
+.genresoverflowon {
+  height: auto;
+  transition: 0.4s;
+}
+.dropbutton {
+  font-size: 50px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+}
+.dropbutton:hover {
+  color: crimson;
 }
 .genrescontainer button {
   width: 150px;
@@ -21,6 +40,7 @@
   color: crimson;
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.4s;
 }
 .genrescontainer button:hover {
   background-color: crimson;
@@ -32,17 +52,44 @@
   background-color: rgb(35, 35, 35);
 }
 .animecontainer {
-  width: 90%;
-  height: 850px;
-  overflow: hidden;
-  overflow-y: scroll;
+  width: 100%;
+  height: auto;
+  background-color: #dbdbdb77;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
 }
 .animeoverflow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
+.animeinterface {
+  display: flex;
+  flex-direction: column;
+  color: rgb(52, 52, 52);
+  font-weight: bold;
+  width: 95%;
+  margin: 10px auto;
+  border-bottom: 5px solid rgba(54, 54, 54, 0.931);
+  padding: 10px;
+}
+.animeinterface h1 {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+.animeinterface div {
+  display: flex;
+  margin-bottom: 15px;
+}
+.animeinterface p {
+  margin-right: 5px;
+}
 .selector {
-  width: 200px;
+  width: 50px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.selector option:focus {
+  background-color: crimson;
 }

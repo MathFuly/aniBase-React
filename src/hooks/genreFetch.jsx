@@ -7,19 +7,20 @@ export const genreFetch = (number, operation, page) => {
 
   const getAnimes = async () => {
     if (operation == true) {
-      setLoad(!load);
+      setLoad(true);
 
-      fetch(`https://api.jikan.moe/v4/anime?page=${page}&genres=${number}`).then(
-        (response) =>
-          response
-            .json()
-            .then((response) => {
-              setData(response.data);
-              setPages(response.pagination.last_visible_page);
-              console.log(pages);
-              setLoad(false);
-            })
-            .catch((err) => console.log(err))
+      fetch(
+        `https://api.jikan.moe/v4/anime?page=${page}&genres=${number}&order_by=score&sort=desc`
+      ).then((response) =>
+        response
+          .json()
+          .then((response) => {
+            setData(response.data);
+            setPages(response.pagination.last_visible_page);
+            console.log(pages);
+            setLoad(false);
+          })
+          .catch((err) => console.log(err))
       );
     }
   };

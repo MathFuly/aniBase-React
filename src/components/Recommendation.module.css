@@ -1,0 +1,213 @@
+.recommendationcontainer {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  background-color: #262626;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.rech1 {
+  width: 80%;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 0, 0, 0),
+    rgb(218, 76, 105),
+    crimson
+  );
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.rech1 svg {
+  font-size: 40px;
+  color: white;
+  margin-right: 10px;
+}
+.cover {
+  width: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* -webkit-mask-image: linear-gradient(to left, transparent 15%, black 100%); */
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  padding: 10px;
+  color: white;
+}
+.titles {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.titles h1 {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.airing {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  margin: 5px 0;
+}
+.airingicon {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: 5px;
+}
+.airingicon span {
+  font-weight: bold;
+}
+.airingicon svg {
+  margin-right: 5px;
+}
+.episodes {
+  display: flex;
+  font-size: 20px;
+  margin: 5px 0;
+}
+.episodes div {
+  display: flex;
+  margin-right: 5px;
+}
+.episodes div p {
+  font-weight: bold;
+}
+.episodes div svg {
+  margin-right: 8px;
+}
+.duration {
+  margin: 5px 0;
+  display: flex;
+  font-size: 20px;
+}
+.duration div {
+  display: flex;
+  align-items: center;
+}
+.duration div p {
+  margin-right: 5px;
+  font-weight: bold;
+}
+.duration div svg {
+  margin-right: 8px;
+}
+.score {
+  margin: 5px 0;
+  display: flex;
+  font-size: 20px;
+}
+.score div {
+  display: flex;
+  align-items: center;
+}
+.score div p {
+  margin-right: 5px;
+  font-weight: bold;
+}
+.score div svg {
+  margin-right: 8px;
+  color: yellow;
+}
+.genres {
+  margin: 5px 0;
+  display: flex;
+  font-size: 20px;
+}
+.genres div {
+  display: flex;
+  align-items: center;
+}
+.genres div p {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.genres div svg {
+  margin-right: 8px;
+  color: white;
+}
+.genretype {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: crimson;
+  font-size: 18px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.year {
+  margin: 5px 0;
+  display: flex;
+  font-size: 20px;
+}
+.year div {
+  display: flex;
+  align-items: center;
+}
+.year div p {
+  margin-right: 5px;
+  font-weight: bold;
+}
+.year div svg {
+  margin-right: 8px;
+  color: white;
+}
+.synopsis {
+  display: flex;
+  margin: 5px 0;
+  flex-direction: column;
+  font-size: 20px;
+}
+.synopsis div {
+  display: flex;
+  align-items: center;
+}
+.synopsis div p {
+  margin-right: 5px;
+  font-weight: bold;
+}
+.synopsis div svg {
+  margin-right: 8px;
+  color: white;
+}
+.synopsis h4 {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: lighter;
+    margin-top: 5px;
+}
+.recommendationcontainer a {
+  width: 60%;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  background-color: #3d49cf;
+  border-radius: 5px;
+  color: white;
+  transition: .4s;
+  margin: 20px auto 0px auto;
+  text-align: center;
+  text-decoration: none;
+}
+.recommendationcontainer a:hover {
+  background-color: crimson;
+
+}

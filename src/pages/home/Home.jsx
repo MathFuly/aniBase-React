@@ -3,12 +3,14 @@ import { FaLeaf } from "react-icons/fa";
 
 import SeasonNow from "../../components/SeasonNow";
 import UpComing from "../../components/UpComing";
+import Recommendation from "../../components/Recommendation";
 
 import styles from "./Home.module.css";
 
 const Home = () => {
   return (
     <div>
+      <Recommendation />
       <div>
         <div className={styles.title}>
           <span>
@@ -27,7 +29,7 @@ const Home = () => {
           </span>
           <h1>Current Season</h1>
         </div>
-        <SeasonNow url={"https://api.jikan.moe/v4/seasons/now"} />
+        <SeasonNow />
       </div>
     </div>
   );

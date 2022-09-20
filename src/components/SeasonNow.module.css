@@ -39,5 +39,17 @@
 .seasonoverfolw {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.pagination button {
+  margin: 5px;
+  padding: 5px;
+  width: 50px;
 }

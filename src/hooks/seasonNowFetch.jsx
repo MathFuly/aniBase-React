@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-export const seasonNowFetch = (url) => {
+export const seasonNowFetch = (page) => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
   const [pages, setPages] = useState("");
 
   const getAnimes = async () => {
     setLoad(true);
-    fetch(url)
+    fetch(`https://api.jikan.moe/v4/seasons/now?page=${page}`)
       .then((response) => response.json())
       .then((response) => {
+        setPages(response.pagination.last_visible_page);
         setData(response.data);
       })
       .catch((err) => console.log(err));
@@ -20,8 +21,7 @@ export const seasonNowFetch = (url) => {
 
   useEffect(() => {
     getAnimes();
-    console.log(data);
-  }, []);
+  }, [page]);
 
-  return { data, load };
+  return { data, load, pages };
 };

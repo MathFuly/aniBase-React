@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useGenre } from "../../hooks/useGenre";
 import { genreFetch } from "../../hooks/genreFetch";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 import Load from "../../components/Load";
 import Cards from "../../components/Cards";
@@ -13,41 +14,79 @@ const Genre = () => {
 
   const [number, setNumber] = useState(1);
   const [page, setPage] = useState(1);
+  const [genreName, setGenreName] = useState("Action")
 
   const { data, load, pages } = genreFetch(number, operation, page);
 
   const pager = [...Array(pages + 1).keys()].slice(1);
 
-  console.log(pager);
+  const [viewgenre, setViewGenres] = useState(false);
 
   return (
     <>
-      <div className={styles.genresearch}>
-        <div className={styles.genresoverflow}>
-          {loadg == true ? (
-            <Load />
-          ) : (
-            <div className={styles.genrescontainer}>
-              {genres &&
-                genres.map((genre) => (
-                  <button onClick={() => { setNumber(genre.mal_id);  setPage(1)}}>
-                    {genre.name}
-                  </button>
-                ))}
+      {loadg == true ? (
+        <Load />
+      ) : (
+        <div className={styles.genresearch}>
+          <div className={styles.genresmain}>
+            <div
+              className={
+                viewgenre == false
+                  ? styles.genresoverflowhidden
+                  : styles.genresoverflowon
+              }
+            >
+              <div className={styles.genrescontainer}>
+                {genres &&
+                  genres.map((genre) => (
+                    <button
+                      onClick={() => {
+                        setNumber(genre.mal_id);
+                        setPage(1);
+                        setGenreName(genre.name);
+                        setViewGenres(!viewgenre);
+                      }}
+                    >
+                      {genre.name}
+                    </button>
+                  ))}
+              </div>
             </div>
-          )}
-        </div>
-
-        <div className={styles.animecontainer}>
-          <div className={styles.animeoverflow}>
-            {data && data.map((animis) => <Cards animis={animis} />)}
+            <button
+              onClick={() => setViewGenres(!viewgenre)}
+              className={styles.dropbutton}
+            >
+              {viewgenre == false ? <IoIosArrowDown /> : <IoIosArrowUp />}
+            </button>
           </div>
-          <select name="select" className={styles.selector} onChange={(e) => setPage(e.target.value)}>
-            {pager.length > 0 &&
-              pager.map((op) => <option value={op}>{op}</option>)}
-          </select>
+
+          <div className={styles.animecontainer}>
+            <div className={styles.animeinterface}>
+              <h1>{genreName}</h1>
+              <div>
+                <p>Page :</p>
+                <select
+                  name="select"
+                  className={styles.selector}
+                  onChange={(e) => setPage(e.target.value)}
+                  value={page}
+                >
+                  {pager.length > 0 &&
+                    pager.map((op) => <option value={op}>{op}</option>)}
+                </select>
+                <p>of : {pager.length}</p>
+              </div>
+            </div>
+            {load === true ? (
+              <Load />
+            ) : (
+              <div className={styles.animeoverflow}>
+                {data && data.map((animis) => <Cards animis={animis} />)}
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
