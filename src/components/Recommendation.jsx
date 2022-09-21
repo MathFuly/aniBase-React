@@ -122,7 +122,7 @@ const Recommendation = () => {
                   <h4>{data.synopsis}</h4>
                 </div>
               </div>
-              <Link to="/">Anime Info</Link>
+              <Link to={`/anime/${data.mal_id}`}>Anime Info</Link>
             </>
           )}
         </div>

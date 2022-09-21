@@ -20,7 +20,7 @@ const Navbar = () => {
         </span>
       </Link>
       <div className={styles.links}>
-        <Link>
+        <Link to="/">
           <div className={styles.overflowc}>
             <RiHomeFill /> <span>Home</span>
           </div>

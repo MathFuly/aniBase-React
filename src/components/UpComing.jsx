@@ -32,7 +32,7 @@ const UpComing = (url2, upcoming = false) => {
                   <FaStar />
                   {animi.score}
                 </h3>
-                <Link to="/anime">Anime Info</Link>
+                <Link to={`/anime/${animi.mal_id}`}>Anime Info</Link>
               </div>
             </div>
           ))}
