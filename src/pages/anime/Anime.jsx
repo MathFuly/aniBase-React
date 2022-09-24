@@ -78,6 +78,91 @@ const Anime = () => {
                     <span>{data.background}</span>
                   </div>
                 </div>
+                <div className={styles.sidebar2}>
+                  <div className={styles.information}>
+                    <h3>Information:</h3>
+                    <div className={styles.informationbase}>
+                      <div>
+                        <p>Type:</p>
+                        <span>{data.type}</span>
+                      </div>
+                      <div>
+                        <p>Episodes:</p>
+                        <span>{data.episodes}</span>
+                      </div>
+                      <div>
+                        <p>status:</p>
+                        <span>{data.status}</span>
+                      </div>
+                      <div>
+                        <p>aired:</p>
+                        {data.aired && <span>{data.aired.string}</span>}
+                      </div>
+                      <div>
+                        <p>season:</p>
+                        <span>
+                          {data.season} {data.year}
+                        </span>
+                      </div>
+                      <div>
+                        <p>broadcast:</p>
+                        {data.broadcast && <span>{data.broadcast.string}</span>}
+                      </div>
+                      <div>
+                        <p>producers:</p>
+                        {data.producers &&
+                          data.producers.map((producer) => (
+                            <span>{producer.name},</span>
+                          ))}
+                      </div>
+                      <div>
+                        <p>studios:</p>
+                        {data.studios &&
+                          data.studios.map((studio) => (
+                            <span>{studio.name},</span>
+                          ))}
+                      </div>
+                      <div>
+                        <p>source:</p>
+                        <span>{data.source}</span>
+                      </div>
+                      <div>
+                        <p>genres:</p>
+                        {data.genres &&
+                          data.genres.map((genre) => (
+                            <span>{genre.name}, </span>
+                          ))}
+                      </div>
+                      <div>
+                        <p>duration:</p>
+                        <span>{data.duration}</span>
+                      </div>
+                      <div>
+                        <p>rating:</p>
+                        <span>{data.rating}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={styles.menu}>
+                    <h3>Menu</h3>
+                    {display && (
+                      <div>
+                        <NavLink
+                          className={display === "details" ? styles.active : ""}
+                          onClick={() => setDisplay("details")}
+                        >
+                          Details
+                        </NavLink>
+                        <NavLink
+                          className={display === "staff" ? styles.active : ""}
+                          onClick={() => setDisplay("staff")}
+                        >
+                          Characters & Staff
+                        </NavLink>
+                      </div>
+                    )}
+                  </div>
+                </div>
                 {display === "details" && <Info data={data} />}
                 {display === "staff" && <Characters id={data.mal_id} />}
               </div>

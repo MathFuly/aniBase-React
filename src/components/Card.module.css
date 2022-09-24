@@ -69,3 +69,11 @@
 .card:hover .cardimg {
   display: none;
 }
+.scores {
+  margin-top: 8px;
+  display: flex;
+}
+.scores span {
+  margin-right: 3px;
+  color: yellow;
+}

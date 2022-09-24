@@ -9,7 +9,7 @@ export const genreFetch = (number, operation, page) => {
     if (operation == true) {
       setLoad(true);
 
-      fetch(
+      await fetch(
         `https://api.jikan.moe/v4/anime?page=${page}&genres=${number}&order_by=score&sort=desc`
       ).then((response) =>
         response

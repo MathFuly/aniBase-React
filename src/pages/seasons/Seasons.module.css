@@ -1,0 +1,214 @@
+.seasonssearch {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.seasonscontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.seasonsoverflowhidden {
+  height: 50px;
+  transition: 2s;
+  overflow: hidden;
+}
+.seasonsoverflowon {
+  height: auto;
+  transition: 0.4s;
+}
+.dropbutton {
+  font-size: 50px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+}
+.dropbutton:hover {
+  color: crimson;
+}
+.ybutton {
+  width: 150px;
+  padding: 10px;
+  margin: 5px;
+  background-color: transparent;
+  border: 3px solid rgba(220, 20, 60, 0.566);
+  color: crimson;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.ybutton:hover {
+  background-color: crimson;
+  color: white;
+}
+.ybutton:focus {
+  border: 3px solid #232323;
+  color: white;
+  background-color: #232323;
+}
+.activey {
+  width: 150px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #232323;
+  border: 3px solid #232323;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.animecontainer {
+  width: 100%;
+  height: auto;
+  background-color: #dbdbdb77;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.animeoverflow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.animeinterface {
+  display: flex;
+  flex-direction: column;
+  color: rgb(52, 52, 52);
+  font-weight: bold;
+  width: 95%;
+  margin: 10px auto;
+  border-bottom: 5px solid rgba(54, 54, 54, 0.931);
+  padding: 10px;
+}
+.animeinterface h1 {
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+.animeinterface div {
+  display: flex;
+  margin-bottom: 15px;
+}
+.animeinterface p {
+  margin-right: 5px;
+}
+.selector {
+  width: 50px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.selector option:focus {
+  background-color: crimson;
+}
+.choseseason {
+  display: flex;
+}
+.sbutton {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 5px 15px;
+  margin: 5px 20px 10px 0px;
+  background-color: transparent;
+  font-size: 20px;
+  border: none;
+  border-bottom: 5px solid transparent;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: rgba(212, 210, 210, 0.475);
+  border-radius: 5px;
+}
+.sbutton:hover {
+  border-bottom: 5px solid rgb(37, 37, 37);
+}
+.actives {
+  transition: 0.4s;
+  border-radius: 5px;
+  text-transform: capitalize;
+  padding: 5px 15px;
+  margin: 5px 20px 10px 0px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 5px solid crimson;
+  font-weight: bold;
+  color: crimson;
+}
+.nfound {
+  width: 100%;
+  height: 150px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #6f6f6f;
+}
+.nfound span {
+  font-size: 70px;
+}
+.nfound p {
+  font-weight: bold;
+}
+@media only screen and (max-width: 1001px) {
+  .choseseason {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .seasonssearch {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .animecontainer {
+    width: 100%;
+    height: auto;
+    background-color: #dbdbdb77;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 10px;
+  }
+  .animeinterface {
+    display: flex;
+    flex-direction: column;
+    color: rgb(52, 52, 52);
+    font-weight: bold;
+    width: 100%;
+    margin: 10px auto;
+    border-bottom: 5px solid rgba(54, 54, 54, 0.931);
+    padding: 10px;
+  }
+  .sbutton {
+    text-align: center;
+    text-transform: capitalize;
+    padding: 5px 15px;
+    margin: 5px 10px 10px 0px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: rgba(212, 210, 210, 0.475);
+    border-radius: 5px;
+  }
+  .actives {
+    text-align: center;
+    transition: 0.4s;
+    border-radius: 5px;
+    text-transform: capitalize;
+    padding: 5px 15px;
+    margin: 5px 10px 10px 0px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 5px solid crimson;
+    font-weight: bold;
+    color: crimson;
+  }
+}

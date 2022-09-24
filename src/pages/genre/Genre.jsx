@@ -40,6 +40,11 @@ const Genre = () => {
                 {genres &&
                   genres.map((genre) => (
                     <button
+                      className={
+                        genreName === genre.name
+                          ? styles.activey
+                          : styles.ybutton
+                      }
                       onClick={() => {
                         setNumber(genre.mal_id);
                         setPage(1);

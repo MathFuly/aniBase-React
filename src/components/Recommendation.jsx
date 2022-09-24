@@ -49,21 +49,13 @@ const Recommendation = () => {
                 </div>
 
                 <div className={styles.airing}>
-                  {data.airing === false ? (
+                  {data.status && (
                     <>
                       <p className={styles.airingicon}>
                         <RiEye2Line />
                         <span>Status:</span>
                       </p>
-                      <p>Completed</p>
-                    </>
-                  ) : (
-                    <>
-                      <p className={styles.airingicon}>
-                        <RiEye2Line />
-                        <span>Status: </span>
-                      </p>
-                      <p>Ongoing</p>
+                      <p>{data.status}</p>
                     </>
                   )}
                 </div>

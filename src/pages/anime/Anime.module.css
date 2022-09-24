@@ -136,7 +136,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
   overflow: hidden;
   width: 540px;
   margin-top: 20px;
@@ -164,8 +163,189 @@
   background-color: #202020;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: .4s;
+  transition: 0.4s;
 }
-.menu div a:hover{
+.menu div a:hover {
+  background-color: crimson;
+}
+.active {
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  width: 90%;
+  margin: 10px auto;
+  text-align: center;
+  background-color: crimson;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.4s;
+}
+.sidebar2 {
+  display: none;
+}
+
+@media only screen and (max-width: 1001px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+    border-radius: 0px;
+    background-color: #e5e5e5;
+  }
+  .infotitle {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .divimg {
+    width: 354px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: auto;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+  }
+  .infomain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  .infostatics {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
+    background-color: #202020;
+    margin: auto;
+  }
+  .infornumber {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 5px;
+  }
+  .infornumber span {
     background-color: crimson;
+    padding: 3px 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+  }
+  .infornumber p {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+  }
+  .otherinfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #202020;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    margin: 10px auto;
+  }
+  .otherinfo p {
+    background-color: crimson;
+    padding: 8px 5px;
+    color: white;
+    font-weight: bold;
+  }
+  .otherinfo span {
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sidebar {
+    padding: 10px 15px;
+    display: none;
+    flex-direction: column;
+  }
+  .sidebar2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .information {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #202020;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    margin: 5px auto;
+  }
+  .information div {
+    font-size: 15px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: 4px solid crimson;
+  }
+  .menu div {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .menu div a {
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #202020;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.4s;
+  }
+  .menu div a:hover {
+    background-color: crimson;
+  }
+  .active {
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    background-color: crimson;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.4s;
+  }
 }

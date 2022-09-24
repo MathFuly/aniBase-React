@@ -1,11 +1,11 @@
 .navbar {
   display: flex;
   width: 100%;
-  justify-content: space-around;
-  height: 80px;
+  flex-direction: column;
   align-items: center;
   background-color: #212121;
   margin-bottom: 50px;
+  padding: 10px 20px;
 }
 
 .logo {
@@ -29,26 +29,64 @@
   color: crimson;
   font-weight: bold;
 }
-.links {
-  width: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.links a {
-  text-decoration: none;
+.hamburguer {
+  font-size: 40px;
   color: white;
-  font-weight: bold;
-  text-transform: capitalize;
-  font-size: 18px;
   transition: 0.4s;
-  border-bottom: 2px solid transparent;
 }
-.links a:hover  .overflowc span{
-  display: inline-block;
+.hamburguer:hover {
+  color: crimson;
 }
-.overflowc span{
-  display: none;
+.principal {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 10px 50px;
+}
+.secondary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  width: 100%;
+  padding: 5px;
+  border-top: 4px solid #282828;
+  animation: fade 2s linear 0s;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+@media only screen and (max-width: 1001px) {
+  .principal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px 20px;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+  }
+  .links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.4s;
+    margin-top: 20px;
+  }
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
 }
 .links a:hover {
   color: crimson;
@@ -56,38 +94,60 @@
 .overflowc {
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+.overflowc span {
+  text-transform: capitalize;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 .overflowc svg {
   font-size: 30px;
-  margin-right: 10px;
 }
-.navbar form {
+.search {
+  margin-bottom: 40px;
+  padding: 10px;
+}
+.search form {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.navbar button svg {
-  margin-left: 20px;
-  font-size: 20px;
-  color: white;
-}
-.navbar button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.navbar button:hover svg {
-  color: crimson;
-}
-.navbar input {
-  border-radius: 10px;
-  padding: 5px 10px;
-  width: 230px;
+.search input {
+  max-width: 500px;
+  min-width: 300px;
+  padding: 6px 10px;
+  border-radius: 5px;
   border: none;
   outline: none;
+  margin-right: 20px;
+  transition: 0.4s;
 }
-.navbar input:focus {
+.search input:focus {
   box-shadow: 0px 0px 10px crimson;
+}
+.search button {
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  transition: 0.4s;
+}
+.search button:hover {
+  color: crimson;
+}
+@keyframes fade {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.active div {
+  color: crimson;
+}
+.noactive {
+  color: rgb(255, 255, 255);
 }

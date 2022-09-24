@@ -65,6 +65,7 @@
 
 .actores {
   display: flex;
+  flex-wrap: wrap;
 }
 .actor {
   margin-right: 25px;
@@ -100,4 +101,54 @@
   text-align: center;
   padding-top: 20px;
   font-size: 70px;
+}
+
+@media only screen and (max-width: 1001px) {
+  .charamain {
+    display: flex;
+    flex-direction: column;
+    background-color: #202020;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .charaimg img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+  .charatext p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .actorimg img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+  .actor {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .actortext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .actortext p {
+    text-align: center;
+    width: 120px;
+  }
+  .actortext span {
+    text-align: center;
+  }
 }

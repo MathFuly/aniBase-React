@@ -31,18 +31,58 @@
   width: 1260px;
 }
 .trailer p {
-      background-color: crimson;
+  background-color: crimson;
   padding: 8px 5px;
   color: white;
   font-weight: bold;
   width: 100%;
 }
 .trailer div iframe {
-    text-align: center;
-    width: 900px;
-    height: 450px;
-    border-radius: 5px;
+  text-align: center;
+  width: 900px;
+  height: 450px;
+  border-radius: 5px;
 }
 .trailer div {
-    padding: 15px;
+  padding: 15px;
+}
+@media only screen and (max-width: 1001px) {
+  .infobottom {
+    width: 100%;
+  }
+  .synopsis {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    background-color: #202020;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .synopsis span {
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #202020;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .trailer div {
+  padding: 5px;
+}
+  .trailer div iframe {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
 }

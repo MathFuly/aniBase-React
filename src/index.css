@@ -53,3 +53,41 @@
     transform: rotate(360deg);
   }
 }
+footer {
+  background-color: #212121;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+footer .copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  color: rgb(177, 177, 177);
+}
+footer .copy p {
+  margin: 3px 0;
+}
+footer .socials {
+  display: flex;
+  font-size: 40px;
+  margin: 10px 0px;
+}
+footer .socials a {
+  text-decoration: none;
+  color: white;
+}
+footer .socials svg {
+  margin: 0 10px;
+  transition: .4s;
+}
+footer .socials svg:hover {
+  transform: scale(1.1);
+  color: crimson;
+  text-shadow: 2px 2px 10px rgb(177, 177, 177);
+}

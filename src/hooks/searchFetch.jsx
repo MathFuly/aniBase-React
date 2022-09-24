@@ -1,30 +1,30 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-export const searchFetch = (query) => {
+export const searchFetch = (query, page) => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
-  const url = `https://api.jikan.moe/v4/anime?q=${query}`;
+  const [pages, setPages] = useState("");
+  const url = `https://api.jikan.moe/v4/anime?q=${query}&page=${page}&order_by=score&sort=desc`;
 
   console.log(url);
 
   const getSearch = async () => {
-    setLoad(!load);
-    console.log(load);
+    setLoad(true);
+
     fetch(url)
       .then((response) => response.json())
       .then((response) => {
-            setLoad(false);
         setData(response.data);
+        setPages(response.pagination.last_visible_page);
+        setLoad(false);
       })
       .catch((err) => console.log(err));
-
-
   };
 
   useEffect(() => {
     getSearch();
-  }, [query]);
+  }, [query, page]);
 
-  return { data, load };
+  return { data, load, pages };
 };

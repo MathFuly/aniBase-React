@@ -31,7 +31,7 @@
 .dropbutton:hover {
   color: crimson;
 }
-.genrescontainer button {
+.ybutton {
   width: 150px;
   padding: 10px;
   margin: 5px;
@@ -42,14 +42,25 @@
   cursor: pointer;
   transition: 0.4s;
 }
-.genrescontainer button:hover {
+.ybutton:hover {
   background-color: crimson;
   color: white;
 }
-.genrescontainer button:focus {
-  border: 3px solid rgb(35, 35, 35);
+.ybutton:focus {
+  border: 3px solid #232323;
   color: white;
-  background-color: rgb(35, 35, 35);
+  background-color: #232323;
+}
+.activey {
+  width: 150px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #232323;
+  border: 3px solid #232323;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
 }
 .animecontainer {
   width: 100%;
@@ -92,4 +103,24 @@
 }
 .selector option:focus {
   background-color: crimson;
+}
+@media only screen and (max-width: 1001px) {
+  .genresearch {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .animeinterface h1 {
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+  .animecontainer {
+    width: 100%;
+    height: auto;
+    background-color: #dbdbdb77;
+    padding: 15px;
+    margin: 0px;
+    border-radius: 0px;
+  }
 }

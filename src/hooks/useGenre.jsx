@@ -8,7 +8,7 @@ export const useGenre = () => {
   const getGenres = async () => {
     setLoadg(!loadg);
 
-    fetch("https://api.jikan.moe/v4/genres/anime").then((response) =>
+    await fetch("https://api.jikan.moe/v4/genres/anime").then((response) =>
       response
         .json()
         .then((response) => {

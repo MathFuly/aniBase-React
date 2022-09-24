@@ -27,3 +27,19 @@
   padding: 10px 5px;
   width: 50%;
 }
+@media only screen and (max-width: 1001px) {
+  .title {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(
+      to left,
+      rgba(255, 0, 0, 0),
+      #5762da,
+      #3d49cf
+    );
+    border-radius: 10px;
+    padding-left: 10px;
+  }
+}
