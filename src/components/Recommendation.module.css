@@ -8,7 +8,7 @@
   border-radius: 10px;
   flex-wrap: wrap;
 }
-@media only screen and (max-width: 2034px) {
+@media only screen and (max-width: 1500px) {
   .recommendationcontainer {
     display: flex;
     flex-direction: column;
@@ -150,7 +150,7 @@
   color: white;
   margin-right: 10px;
 }
-@media only screen and (min-width: 2035px) {
+@media only screen and (min-width: 1501px) {
   .cover {
     width: 404px;
     height: 590px;
