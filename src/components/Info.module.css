@@ -1,3 +1,6 @@
+.infobottom {
+  width: 98%;
+}
 .synopsis {
   display: flex;
   flex-direction: column;
@@ -5,7 +8,7 @@
   background-color: #202020;
   border-radius: 5px;
   overflow: hidden;
-  width: 1260px;
+  width: 100%;
 }
 .synopsis p {
   background-color: crimson;
@@ -28,7 +31,7 @@
   background-color: #202020;
   border-radius: 5px;
   overflow: hidden;
-  width: 1260px;
+  width: 100%;
 }
 .trailer p {
   background-color: crimson;
@@ -39,8 +42,8 @@
 }
 .trailer div iframe {
   text-align: center;
-  width: 900px;
-  height: 450px;
+  width: 600px;
+  height: 350px;
   border-radius: 5px;
 }
 .trailer div {

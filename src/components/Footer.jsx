@@ -16,7 +16,7 @@ const Footer = () => {
       </div>
       <div className="copy">
         <p>Developed by Matheus Fuly in 2022/09/20</p>
-        <p>&copy;aniBase</p>
+        <p>&copy; aniBASE</p>
       </div>
     </footer>
   );
