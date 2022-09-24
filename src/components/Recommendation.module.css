@@ -143,7 +143,7 @@
 @media only screen and (min-width: 1501px) {
   .recommendationcontainer {
     display: flex;
-    width: 65%;
+    width: 1300px;
     margin: auto;
     padding: 20px;
     background-color: #262626;
