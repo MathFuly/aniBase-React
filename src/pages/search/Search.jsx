@@ -47,7 +47,7 @@ const Search = () => {
                 <select
                   name="select"
                   className={styles.selector}
-                  onChange={(e) => setPage(e.target.value)}
+                  onChange={(e) => { setPage(e.target.value);  setView(false)}}
                   value={page}
                 >
                   {pager.length > 0 &&

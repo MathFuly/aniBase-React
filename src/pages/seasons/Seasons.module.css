@@ -26,7 +26,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin: 10px;
+  margin: 10px auto;
 }
 .dropbutton:hover {
   color: crimson;
@@ -179,7 +179,7 @@
     flex-direction: column;
     color: rgb(52, 52, 52);
     font-weight: bold;
-    width: 100%;
+    width: 80%;
     margin: 10px auto;
     border-bottom: 5px solid rgba(54, 54, 54, 0.931);
     padding: 10px;

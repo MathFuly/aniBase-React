@@ -14,7 +14,7 @@
 /* Track */
 ::-webkit-scrollbar-track {
   background: #858585b6;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 /* Handle */
