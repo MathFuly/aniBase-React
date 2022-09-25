@@ -1,8 +1,6 @@
 import styles from "./Info.module.css";
 
 const Info = (data) => {
-
-    console.log(data)
   return (
     <>
       {data.data && (

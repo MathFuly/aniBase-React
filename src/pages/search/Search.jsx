@@ -29,7 +29,6 @@ const Search = () => {
     review();
   }, []);
 
-  console.log(load);
 
   return (
     <div className={styles.search}>
@@ -51,7 +50,7 @@ const Search = () => {
                   value={page}
                 >
                   {pager.length > 0 &&
-                    pager.map((op) => <option value={op}>{op}</option>)}
+                    pager.map((op) => <option key={op} value={op}>{op}</option>)}
                 </select>
                 <p>of : {pager.length}</p>
               </div>
@@ -59,7 +58,7 @@ const Search = () => {
             <div className={styles.animecontainer}>
               {data &&
                 data.map((animis) => (
-                  <Cards className={styles.cardin} animis={animis} />
+                  <Cards keys={animis.mal_id} className={styles.cardin} animis={animis} />
                 ))}
             </div>
           </div>

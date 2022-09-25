@@ -39,7 +39,6 @@ export const fetchAll = (number, page) => {
                   ...Array(response.pagination.last_visible_page + 1).keys(),
                 ].slice(1)
               );
-              console.log(data);
               setLoad(false);
             })
             .catch((err) => console.log(err))

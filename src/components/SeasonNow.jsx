@@ -8,7 +8,6 @@ import styles from "./SeasonNow.module.css";
 const SeasonNow = () => {
   const [view, setView] = useState(false);
   const [page, setPage] = useState(1);
-  console.log(page)
 
   const { data, pages, laod } = seasonNowFetch(page);
   const pager = [...Array(pages + 1).keys()].slice(1);
@@ -19,7 +18,7 @@ const SeasonNow = () => {
         className={view === false ? styles.seasondivoff : styles.seasondivoon}
       >
         <div className={styles.seasonoverfolw}>
-          {data && data.map((animis) => animis && <Cards animis={animis} />)}
+          {data && data.map((animis) => animis && <Cards key={animis.mal_id} animis={animis} />)}
         </div>
       </div>
       <div className={styles.pagination}>

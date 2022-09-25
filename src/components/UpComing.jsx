@@ -13,7 +13,7 @@ const UpComing = (url2, upcoming = false) => {
       <div className={styles.animecontainer2}>
         {data.top &&
           data.top.map((animi) => (
-            <div className={styles.animecard}>
+            <div key={animi.mal_id} className={styles.animecard}>
               <div className={styles.imgdiv}>
                 <span>#{animi.rank}</span>
                 <img src={animi.image_url} alt="" />

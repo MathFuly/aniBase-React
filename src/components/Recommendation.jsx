@@ -19,8 +19,6 @@ import Load from "../components/Load";
 const Recommendation = () => {
   const { data, load } = useRecommend();
 
-  console.log(data);
-
   return (
     <>
       {load === true ? (
@@ -93,7 +91,9 @@ const Recommendation = () => {
                     </div>
                     {data.genres != undefined &&
                       data.genres.map((genre) => (
-                        <p className={styles.genretype}>{genre.name}</p>
+                        <p key={genre.name} className={styles.genretype}>
+                          {genre.name}
+                        </p>
                       ))}
                   </div>
                 )}

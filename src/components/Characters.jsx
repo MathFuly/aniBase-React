@@ -17,6 +17,7 @@ const Characters = (id) => {
           <div className={styles.charalist}>
             {data.map((characters) => (
               <div
+                key={characters.character.mal_id}
                 className={
                   view === characters.character.mal_id
                     ? styles.charatwo
@@ -51,7 +52,7 @@ const Characters = (id) => {
 
                 <div className={styles.actores}>
                   {characters.voice_actors.map((actor) => (
-                    <div className={styles.actor}>
+                    <div key={actor.person.mal_id} className={styles.actor}>
                       <div className={styles.actorimg}>
                         <img src={actor.person.images.jpg.image_url} alt="" />
                       </div>

@@ -112,14 +112,14 @@ const Anime = () => {
                         <p>producers:</p>
                         {data.producers &&
                           data.producers.map((producer) => (
-                            <span>{producer.name},</span>
+                            <span key={producer.name}>{producer.name},</span>
                           ))}
                       </div>
                       <div>
                         <p>studios:</p>
                         {data.studios &&
                           data.studios.map((studio) => (
-                            <span>{studio.name},</span>
+                            <span key={studio.name}>{studio.name},</span>
                           ))}
                       </div>
                       <div>
@@ -130,7 +130,7 @@ const Anime = () => {
                         <p>genres:</p>
                         {data.genres &&
                           data.genres.map((genre) => (
-                            <span>{genre.name}, </span>
+                            <span key={genre.name}>{genre.name}, </span>
                           ))}
                       </div>
                       <div>
@@ -200,14 +200,14 @@ const Anime = () => {
                       <p>producers:</p>
                       {data.producers &&
                         data.producers.map((producer) => (
-                          <span>{producer.name},</span>
+                          <span key={producer.name}>{producer.name},</span>
                         ))}
                     </div>
                     <div>
                       <p>studios:</p>
                       {data.studios &&
                         data.studios.map((studio) => (
-                          <span>{studio.name},</span>
+                          <span key={studio.name}>{studio.name},</span>
                         ))}
                     </div>
                     <div>
@@ -217,7 +217,7 @@ const Anime = () => {
                     <div>
                       <p>genres:</p>
                       {data.genres &&
-                        data.genres.map((genre) => <span>{genre.name}, </span>)}
+                        data.genres.map((genre) => <span key={genre.name}>{genre.name}, </span>)}
                     </div>
                     <div>
                       <p>duration:</p>

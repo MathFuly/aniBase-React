@@ -47,8 +47,10 @@ const Season = () => {
                 {seasons &&
                   seasons.map((season) => (
                     <button
-                      className={year === season.year ? styles.activey : styles.ybutton}
                       key={season.year}
+                      className={
+                        year === season.year ? styles.activey : styles.ybutton
+                      }
                       onClick={() => {
                         setYear(season.year);
                         setViewSeason(false);
@@ -95,7 +97,11 @@ const Season = () => {
                   value={page}
                 >
                   {pager.length > 0 &&
-                    pager.map((op) => <option value={op}>{op}</option>)}
+                    pager.map((op) => (
+                      <option key={op} value={op}>
+                        {op}
+                      </option>
+                    ))}
                 </select>
                 <p>of : {pager.length}</p>
               </div>
@@ -112,7 +118,9 @@ const Season = () => {
                     <p>Nothing Found</p>
                   </p>
                 ) : (
-                  data.map((animis) => <Cards animis={animis} />)
+                  data.map((animis) => (
+                    <Cards key={animis.mal_id} animis={animis} />
+                  ))
                 )}
               </div>
             )}

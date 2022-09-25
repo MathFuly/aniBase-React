@@ -7,8 +7,6 @@ export const searchFetch = (query, page) => {
   const [pages, setPages] = useState("");
   const url = `https://api.jikan.moe/v4/anime?q=${query}&page=${page}&order_by=score&sort=desc`;
 
-  console.log(url);
-
   const getSearch = async () => {
     setLoad(true);
 

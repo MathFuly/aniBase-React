@@ -13,7 +13,6 @@ export const useGenre = () => {
         .json()
         .then((response) => {
           setGenres(response.data);
-          console.log(response);
           setLoadg(false);
           setOperation(true);
         })

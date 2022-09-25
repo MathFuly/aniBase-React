@@ -17,7 +17,6 @@ export const genreFetch = (number, operation, page) => {
           .then((response) => {
             setData(response.data);
             setPages(response.pagination.last_visible_page);
-            console.log(pages);
             setLoad(false);
           })
           .catch((err) => console.log(err))

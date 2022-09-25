@@ -14,7 +14,7 @@ const Genre = () => {
 
   const [number, setNumber] = useState(1);
   const [page, setPage] = useState(1);
-  const [genreName, setGenreName] = useState("Action")
+  const [genreName, setGenreName] = useState("Action");
 
   const { data, load, pages } = genreFetch(number, operation, page);
 
@@ -40,6 +40,7 @@ const Genre = () => {
                 {genres &&
                   genres.map((genre) => (
                     <button
+                      key={genre.name}
                       className={
                         genreName === genre.name
                           ? styles.activey
@@ -77,7 +78,7 @@ const Genre = () => {
                   value={page}
                 >
                   {pager.length > 0 &&
-                    pager.map((op) => <option value={op}>{op}</option>)}
+                    pager.map((op) => <option key={op} value={op}>{op}</option>)}
                 </select>
                 <p>of : {pager.length}</p>
               </div>
@@ -86,7 +87,7 @@ const Genre = () => {
               <Load />
             ) : (
               <div className={styles.animeoverflow}>
-                {data && data.map((animis) => <Cards animis={animis} />)}
+                {data && data.map((animis) => <Cards key={animis.mal_id} animis={animis} />)}
               </div>
             )}
           </div>

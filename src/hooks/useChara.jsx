@@ -8,7 +8,6 @@ export const useChara = (id) => {
       .then((response) => response.json())
         .then((response) => {
             setData(response.data)
-            console.log(response.data)
         });
   };
 

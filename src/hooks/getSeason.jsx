@@ -19,7 +19,6 @@ export const getSeason = () => {
         const seasonDefault = response.data.filter(
           (season) => season.year == anoAtual
         );
-        console.log(seasonDefault)
         setSeasonsni(seasonDefault[0]);
       });
   };
